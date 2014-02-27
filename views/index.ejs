@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>seo sample</title>
+    <meta name="keywords" content="seo, sample">
+    <meta name="description" content="show the way to solve seo issue in single page application">
+    <link rel="stylesheet" href="/dist/bootstrap.min.css" />
+    <link rel='stylesheet' href='/dist/app.min.css' />
+  </head>
+  <body>
+    <script src="/dist/vendor.min.js"></script>      
+    <script src="/dist/app.min.js"></script>      
+    <script src="/dist/templates.js"></script>      
+    <% if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') { 
+      %>
+      <script src="http://localhost:35729/livereload.js"></script>      
+    <% } %>
+  </body>
+</html>

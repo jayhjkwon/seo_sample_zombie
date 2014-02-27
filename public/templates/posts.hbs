@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4">        
+      <table class="table">
+        {{#each post in model}}
+          <tr><td>
+            {{#link-to 'posts.detail' post}}
+              {{post.title}}
+            {{/link-to}}
+            {{#link-to 'posts.edit' post class="btn pull-right"}}Edit{{/link-to}}  
+            <button class="btn pull-right" {{action 'deletePost' post}}>Delete</button>
+          </td></tr>
+        {{/each}}
+      </table>
+    </div>      
+    <div class="span8 well">
+      {{outlet}}
+    </div>
+  </div>
+</div>
