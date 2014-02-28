@@ -65,7 +65,7 @@ app.get('/', function(req, res) {
     // this solution only works when hashbang is used
     var fullURL = req.protocol + "://" + req.get('host') + '/#!' + req.query._escaped_fragment_;
     Browser.visit(fullURL, browserOpts, function(e, browser, status){
-      var html = browser.html('body');
+      var html = browser.html();
 
       // remove scripts
       var scripts = 
