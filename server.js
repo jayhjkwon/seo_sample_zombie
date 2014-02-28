@@ -67,7 +67,7 @@ app.get('/', function(req, res) {
     Browser.visit(fullURL, browserOpts, function(e, browser, status){
       var html = browser.html();
 
-      // remove scripts
+      // remove scripts : this is totally optional, just for testing purpose
       var scripts = 
       [
         '<script src="/dist/vendor.min.js"></script>',
